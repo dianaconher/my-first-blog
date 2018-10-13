@@ -1,26 +1,48 @@
+{% load static %}
+
+
 <html>
  <head>
-        <title>Diana's blog</title>
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link href="//fonts.googleapis.com/css?family=Charmonman" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Diana's blog</title>
     </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-	<marquee> Hello world</marquee>
-	<div>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
+	<div class= "background">
+	
+	<!-- Navigation bar with social media icons -->
+	<div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+   <a href="https://www.instagram.com/diana.chdz/?hl=es-la" class="instagram"><i class="fa fa-instagram"></i></a> 
+	</div>
+		
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
+	<div class="center">
+		
+		 <h1><center>Django Girls Blog</center></h1>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+		 <br />
+		{% for post in posts %}
+			<div class="post">
+				<p>published: {{ post.published_date }}</p>
+				<p>author: {{ post.author }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
+	</div>
+	
+			
+  
+	<marquee> <div class=footer> Hello world </div></marquee>
+	</div>
 
 </body>
 </html>

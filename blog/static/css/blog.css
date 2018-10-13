@@ -1,0 +1,106 @@
+
+
+body {
+	
+	
+	margin: 0;
+	height: 100%;
+	
+}
+h1{
+	color:  #336600;
+    font-family: 'Charmonman';
+}
+
+div.center {
+	width: 800px; 
+	padding: 5px; 
+	margin: 0 auto; 
+	border-left: 1px solid #000;  
+	border-bottom: 1px solid #000; 
+	border-right: 1px solid #000; 
+	background-color: #B0C4DE;
+
+}
+
+div.post {
+	
+	background-color: 	#FFEFD5;  
+	padding: 5px;
+	margin-bottom: 10px;
+	font-family: verdana;
+	
+}
+div.background{
+	
+	/* The image used */
+    background-image: url("img_girl.jpg");
+
+
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+	
+	background-attachment: fixed;
+	
+}
+div.footer{
+	
+	font-family: verdana;
+	color: #ffffff
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+.instagram {
+  background: #ff0066;
+  color: white;
+}
